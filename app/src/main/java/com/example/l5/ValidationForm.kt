@@ -19,6 +19,7 @@ class ValidationForm : AppCompatActivity() {
         val password: EditText = findViewById(R.id.password)
         val genderGroup: RadioGroup = findViewById(R.id.gender_group)
         val seekBar: SeekBar = findViewById(R.id.progress_bar)
+        val termsCheckbox: CheckBox = findViewById(R.id.terms_checkbox)
         val submitButton: Button = findViewById(R.id.submit_button)
 
         // ToggleButton logic
@@ -58,6 +59,10 @@ class ValidationForm : AppCompatActivity() {
             }
             if (gender == null) {
                 showToast("Please select a gender.")
+                return@setOnClickListener
+            }
+            if (!termsCheckbox.isChecked) {
+                showToast("You must agree to the Terms and Conditions.")
                 return@setOnClickListener
             }
 

@@ -25,8 +25,8 @@
     <!-- ImageView -->
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="157dp"
-        android:layout_height="137dp"
+        android:layout_width="156dp"
+        android:layout_height="84dp"
 
         android:contentDescription="App Logo"
 
@@ -43,7 +43,7 @@
         android:id="@+id/full_name"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+
         android:hint="Full name"
         android:inputType="textPersonName"
         android:textColor="#000000"
@@ -154,17 +154,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <CheckBox
+        android:id="@+id/terms_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="I agree to the Terms and Conditions"
+        android:textColor="#000000"
+        android:buttonTint="#8A2BE2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_bar" />
+
+
     <!-- Submit Button -->
     <Button
         android:id="@+id/submit_button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        android:backgroundTint="#8A2BE2"
-        android:textColor="@android:color/white"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/progress_bar"
+        android:backgroundTint="#8A2BE2"
+        android:text="Submit"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/terms_checkbox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
